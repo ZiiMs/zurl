@@ -121,7 +121,7 @@ const Home: NextPage = () => {
       <div className='inline-flex flex-col space-y-2'>
         <div className='flex space-x-2'>
           <span className='self-center text-lg font-medium text-red-500'>
-          {location.current}
+          {location.current.split('/')[2]}/
           </span>
           <input
             type={'slug'}
