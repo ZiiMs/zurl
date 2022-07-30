@@ -1,10 +1,11 @@
 import { withTRPC } from '@trpc/next';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import '../styles/globals.css';
 import { AppRouter } from './api/trpc/[trpc]';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (<><Head><title>Zurl - Easy URL shortner.</title></Head><Component {...pageProps} /></>)
 }
 
 export default withTRPC<AppRouter>({
